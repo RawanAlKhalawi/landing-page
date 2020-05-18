@@ -19,7 +19,6 @@
  */
 const navl = document.getElementById("navbar__list");
 const section = document.querySelectorAll("section");
-
 /**
  * End Global Variables
  * Start Helper Functions
@@ -64,7 +63,9 @@ function scroll() {
     {
       nav.addEventListener("click", function() {
         for (i = 0; i < section; i++) {
-          section[i].scrollIntoView();
+          section[i].scrollIntoView({
+            behavior: "smooth"
+          });
         }
       });
     }
